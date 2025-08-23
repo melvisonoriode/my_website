@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melvis Onoriode - Resume</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            transition: background-color 0.3s, color 0.3s;
+        }
+        body.dark {
+            background-color: #1f2937;
+            color: #f3f4f6;
+        }
+        body.dark .bg-gray-100 {
+            background-color: #374151;
+        }
+        body.dark .bg-white {
+            background-color: #4b5563;
+        }
+        body.dark .text-gray-600 {
+            color: #d1d5db;
+        }
+        body.dark .text-gray-800 {
+            color: #f3f4f6;
+        }
+        .animated-bg {
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background-color: #e5e7eb;
+        }
+        body.dark .timeline::before {
+            background-color: #6b7280;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            background-color: #3b82f6;
+            border-radius: 50%;
+            z-index: 10;
+        }
+        .timeline-item:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+        }
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-left: calc(50% + 2rem);
+        }
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-right: calc(50% + 2rem);
+        }
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 1rem;
+            }
+            .timeline-item::before {
+                left: 1rem;
+            }
+            .timeline-item .timeline-content {
+                margin-left: 3rem !important;
+                margin-right: 1rem !important;
+            }
+        }
+        details summary {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <header class="animated-bg text-white py-8 sticky top-0 z-50">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="https://placehold.co/150x150?text=Headshot" alt="Melvis Onoriode Headshot" class="rounded-full mr-4 w-20 h-20">
+                <div>
+                    <h1 class="text-3xl font-bold">Melvis O. Onoriode</h1>
+                    <p class="mt-2">Data Analyst | SAP EDI Consultant</p>
+                    <p class="mt-1">902-394-0258 | onoriodemelvis@gmail.com</p>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button id="theme-toggle" class="p-2 rounded-full bg-white bg-opacity-20 hover:bg-opacity-30">
+                    <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
+                </button>
+                <a href="main.html" class="px-4 py-2 bg-white bg-opacity-20 rounded-lg hover:bg-opacity-30 transition-all">Analytics Portfolio</a>
+            </div>
+        </div>
+        <nav class="container mx-auto px-4 mt-4">
+            <a href="#summary" class="text-white hover:underline mr-4" onclick="smoothScroll('summary')">Summary</a>
+            <a href="#skills" class="text-white hover:underline mr-4" onclick="smoothScroll('skills')">Skills</a>
+            <a href="#experience" class="text-white hover:underline mr-4" onclick="smoothScroll('experience')">Experience</a>
+            <a href="#education" class="text-white hover:underline mr-4" onclick="smoothScroll('education')">Education</a>
+            <a href="#certifications" class="text-white hover:underline" onclick="smoothScroll('certifications')">Certifications</a>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 py-12">
+        <section id="summary" class="mb-12">
+            <h2 class="text-2xl font-semibold mb-4">Professional Summary</h2>
+            <p class="bg-white p-6 rounded-lg shadow-md">Results-driven Data Analyst with over 3 years of experience in logistics, healthcare, and enterprise software, specializing in data analysis, visualization, and process optimization. Proficient in R, Python, and SQL, with expertise in creating impactful visualizations using Tableau, R Shiny, and ggplot2. Adept at leveraging machine learning models (e.g., Logistic Regression, Random Forests) to derive actionable insights. Strong problem-solving skills and experience working in Linux and Windows environments, with a proven track record of improving data accuracy and operational efficiency.</p>
+        </section>
+
+        <section id="skills" class="mb-12">
+            <h2 class="text-2xl font-semibold mb-4">Technical Skills</h2>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <li><strong>Programming Languages:</strong> SQL, R, Python, MATLAB, HTML, JavaScript, TypeScript</li>
+                    <li><strong>Frameworks & Libraries:</strong> Next.js, React, Tailwind CSS, React Hook Form</li>
+                    <li><strong>Data Visualization:</strong> Tableau, Matplotlib, Grafana, Plotly.js, R Shiny, ggplot2, Excel</li>
+                    <li><strong>Databases:</strong> PostgreSQL (via Supabase), InfluxDB</li>
+                    <li><strong>Cloud & Infrastructure:</strong> AWS (Amazon Web Services), Airtable</li>
+                    <li><strong>Data Analysis & Modeling:</strong> Logistic Regression, Decision Trees, Linear Regression, Time Series Forecasting</li>
+                    <li><strong>Other:</strong> Crystal Reports, Truckmate Command Centre, ODBC, React i18next</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="experience" class="relative mb-12">
+            <h2 class="text-2xl font-semibold text-center mb-8">Work Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content bg-white p-6 rounded-lg shadow-md max-w-md">
+                        <h3 class="text-xl font-bold">EDI Consultant</h3>
+                        <p class="text-gray-600">CONTAX - Remote | May 2023 - Nov 2024</p>
+                        <p class="mt-2">Objective: Enhance the efficiency of business operations by automating manual processes, reducing data entry errors, and streamlining data exchange.</p>
+                        <details class="mt-2">
+                            <summary class="font-semibold">Responsibilities</summary>
+                            <ul class="list-disc pl-6 mt-2">
+                                <li>Designed and executed end-to-end EDI implementations, ensuring seamless data exchange between clients and their trading partners.</li>
+                                <li>Led data mapping initiatives, translating clients' internal data formats into standardized EDI formats (ANSI X12, EDIFACT), minimizing errors and enhancing data accuracy.</li>
+                                <li>Collaborated with clients to identify areas for continuous improvement, recommending and implementing enhancements to existing EDI systems that led to increased efficiency and customer satisfaction.</li>
+                            </ul>
+                        </details>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content bg-white p-6 rounded-lg shadow-md max-w-md">
+                        <h3 class="text-xl font-bold">Digital and Strategic Support Coordinator (contract)</h3>
+                        <p class="text-gray-600">Atlantic Student Development Alliance Inc. (WorkSource Alliance) | July 2024 - Sept 2024</p>
+                        <p class="mt-2">Objective: Support technical development of digital tools and strategic initiatives through data analysis, project coordination, and system optimization in a hybrid tech environment.</p>
+                        <details class="mt-2">
+                            <summary class="font-semibold">Responsibilities</summary>
+                            <ul class="list-disc pl-6 mt-2">
+                                <li>Collaborated across departments to support the development and maintenance of digital tools using Next.js, React, TypeScript, and Supabase (PostgreSQL, Authentication, Edge Functions).</li>
+                                <li>Performed data analysis and reporting to drive strategic planning and continuous improvement, integrating data from Airtable and other sources.</li>
+                                <li>Contributed to project delivery by coordinating tasks, ensuring data integrity, and leveraging TanStack Query for efficient data fetching and caching.</li>
+                                <li>Utilized Tailwind CSS and React Hook Form to enhance user interfaces and streamline form interactions.</li>
+                                <li>Supported real-time data updates and analytics tracking to monitor user engagement and system performance.</li>
+                            </ul>
+                        </details>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content bg-white p-6 rounded-lg shadow-md max-w-md">
+                        <h3 class="text-xl font-bold">Data Analyst / Report Specialist</h3>
+                        <p class="text-gray-600">Bulk Carriers (P.E.I.) Limited | Jan 2022 - Apr 2023</p>
+                        <p class="mt-2">Objective: Produced reports and key performance indicators using Crystal Reports and the Truckmate Command Centre. Strong knowledge of ODBC connections and SQL.</p>
+                        <details class="mt-2">
+                            <summary class="font-semibold">Responsibilities</summary>
+                            <ul class="list-disc pl-6 mt-2">
+                                <li>Analyzed and extracted data from operational databases to create reports for various departments to analyze their efficiency and performance.</li>
+                                <li>Produced Key Performance Indicators using the Truckmate Command Centre to track and measure performance metrics.</li>
+                                <li>Incorporated data from other sources to provide comprehensive and accurate reports.</li>
+                                <li>Utilized Crystal Reports to create visually appealing and easy-to-understand reports.</li>
+                                <li>Maintained and updated ODBC connections to ensure data accuracy and integrity.</li>
+                            </ul>
+                        </details>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content bg-white p-6 rounded-lg shadow-md max-w-md">
+                        <h3 class="text-xl font-bold">Data Analyst</h3>
+                        <p class="text-gray-600">ehealth4everyone - Remote | May 2019 – Dec 2020</p>
+                        <p class="mt-2">Objective: To assist in the analysis of customer data to identify trends and inform marketing strategies, and to present findings and recommendations to the marketing team.</p>
+                        <details class="mt-2">
+                            <summary class="font-semibold">Responsibilities</summary>
+                            <ul class="list-disc pl-6 mt-2">
+                                <li>Assisted in the analysis of customer data using R and Tableau.</li>
+                                <li>Created reports and visualizations to present findings to the marketing team.</li>
+                                <li>Made recommendations for improvement based on data analysis.</li>
+                            </ul>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="mb-12">
+            <h2 class="text-2xl font-semibold mb-4">Education</h2>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <p><strong>University of Prince Edward Island (UPEI)</strong><br>BSc Statistics & Mathematics<br>Coursework: Probability and Statistical Methods, Survey Sampling, Numerical Analysis, Time Series Forecasting, Data Mining, and Programming.</p>
+            </div>
+        </section>
+
+        <section id="certifications" class="mb-12">
+            <h2 class="text-2xl font-semibold mb-4">Certifications and Licenses</h2>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <ul class="list-disc pl-6">
+                    <li>Foundation data, data everywhere - Issued by Coursera - Completed, May 2021</li>
+                    <li>AWS Cloud Practitioner Essentials - Completed, May 2025</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-4 text-center">
+        <p>&copy; 2025 Melvis Onoriode. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function smoothScroll(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        const themeToggle = document.getElementById('theme-toggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark');
+            localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+        });
+
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark');
+        }
+    </script>
+</body>
+</html>
