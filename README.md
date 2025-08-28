@@ -12,8 +12,8 @@ A modern, responsive portfolio website showcasing data analytics expertise and p
 
 ## 🚀 Live Demo
 
-Visit the live site: melvisonoriode.github.io/my_website/ 
-
+Visit the live site: [melvisonoriode.github.io/my_website/ 
+](https://melvisonoriode.github.io/my_website/)
 ## 📱 Pages
 
 1. **Home (index.html)**: Professional resume with animated header and timeline
